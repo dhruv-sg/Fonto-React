@@ -1,26 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function HomeHero() {
   const brandText = "Fonto®";
 
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white pt-[72px]">
       <div className="px-[30px] pt-12 md:pt-16 lg:pt-20 pb-[20px]">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-20">
           {/* Left Side - Brand Text with Character Drop Animation */}
           <div className="flex-shrink-0">
-            <h1 
+            <h1
               aria-label="Fonto®"
               className="text-5xl sm:text-5xl md:text-[10rem] lg:text-[12rem] font-semibold text-black leading-none tracking-tight flex"
             >
-              {brandText.split('').map((char, index) => (
+              {brandText.split("").map((char, index) => (
                 <span
                   key={index}
                   aria-hidden="true"
                   className="inline-block animate-character-drop"
                   style={{
                     animationDelay: `${index * 0.05}s`,
-                    animationFillMode: 'both'
+                    animationFillMode: "both",
                   }}
                 >
                   {char}
@@ -32,9 +32,9 @@ function HomeHero() {
           {/* Right Side - Rating + Description */}
           <div className="flex flex-col items-center lg:items-end gap-3 max-w-sm lg:max-w-md">
             {/* Star Rating Row */}
-            <div 
+            <div
               className="flex items-center gap-2"
-              role="img" 
+              role="img"
               aria-label="Rated 4.9 out of 5 stars"
             >
               {/* 5 Stars */}
@@ -57,7 +57,8 @@ function HomeHero() {
 
             {/* Description Text */}
             <p className="text-gray-600 text-sm text-center lg:text-right leading-relaxed">
-              Smart tools and strategies designed to grow your business and elevate your brand.
+              Smart tools and strategies designed to grow your business and
+              elevate your brand.
             </p>
           </div>
         </div>
